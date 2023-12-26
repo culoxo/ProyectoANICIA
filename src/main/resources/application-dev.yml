@@ -1,0 +1,52 @@
+server:
+  port: 9898
+
+api: /api/v1
+
+scsgateway:
+  datasource:
+    jdbc-url: jdbc:oracle:thin:@192.168.1.74:1521/XEPDB1
+    username: system
+    password: Anita14112013
+    driver-class-name: oracle.jdbc.OracleDriver
+    maximumPoolSize: 5
+
+spring:
+  jpa:
+    show-sql: false
+  
+consumers:
+  consumerslist:
+    -
+      app: frontend
+      key: 12b46aeb-ac3f-429c-8e87-bafbc5c725bb
+  
+ws_rest:
+  scsconsultas: https://scswebpre.intranet.scsalud.es/RestConsultas/services/Consultas/consultas
+
+  
+ws_soap:
+  historiaclinica: 
+    url: http://locahost:9898/scs-integraciones/services/hcdsns/?wsdl
+  mentes:
+    #url: https://smsmentes.intranet.scsalud.es/Mentes-IS-MT/services/MI-InterfazSimplificado?wsdl
+    #username: cvdcan
+    #password: 1sM3nGcs21
+    url: https://comunicasms.intranet.scsalud.es/service.asmx?wsdl
+    username: PINOCHO
+    password: PFadJn30mKsbM3iP   
+    remitente: 'SCSalud'
+    pwa_url: 'https://pwa-url/'
+    pin_and_url_sms_text_1: 'Para cumplimentar al cuestionario, debe acceder a la siguiente URL: '
+    pin_and_url_sms_text_2: ' e introducir este PIN:'
+    sms_limit_batch: 100
+    
+truststore:
+  alias: (lp_qsep_m_es_p12_344_1825_sw_kpsc)_q3900738j
+  password: VwfPr8FvKdfwuncW
+  file: /opt/saludcantabriaresponde/sns_keystore_2022.jks
+  type: jks
+
+
+
+

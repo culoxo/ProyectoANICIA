@@ -1,0 +1,43 @@
+INSERT INTO `saludcantabriaresponde`.`form_question` VALUES (16,2,164,NULL,1),(17,3,164,NULL,1),(18,4,164,NULL,1),(19,5,164,NULL,1),(20,6,164,NULL,1),(21,7,164,NULL,1),(22,8,164,NULL,1);
+
+ALTER TABLE `saludcantabriaresponde`.`patient_file` 
+ADD COLUMN `pf_gender` VARCHAR(20) NULL AFTER `pf_age`,
+CHANGE COLUMN `pf_age` `pf_age` INT NULL DEFAULT NULL ;
+
+ALTER TABLE `saludcantabriaresponde`.`phone_call_pf_f_a` 
+CHANGE COLUMN `pcpffa_original_form_category` `pcpffa_original_form_category` VARCHAR(45) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL ;
+
+ALTER TABLE `saludcantabriaresponde`.`phone_call_pf_f_a` 
+CHANGE COLUMN `pcpffa_original_question_block_text` `pcpffa_original_question_block_text` VARCHAR(100) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL ;
+
+DROP TABLE `saludcantabriaresponde`.`patient_answer`;
+-- EJECUTAR A PARTIR DE AQUÍ
+ALTER TABLE `saludcantabriaresponde`.`patient_file`
+	ADD COLUMN `pf_phone_civ` varchar(45) CHARACTER SET latin1 COLLATE latin1_spanish_ci DEFAULT NULL;
+ALTER TABLE `saludcantabriaresponde`.`patient_file`
+  ADD COLUMN `pf_phone_civ_1` varchar(45) CHARACTER SET latin1 COLLATE latin1_spanish_ci DEFAULT NULL;
+  
+INSERT INTO `saludcantabriaresponde`.`patient_file_status`
+(`pfs_code`,
+`pfs_description`,
+`pfs_enabled`,
+`pfs_sort`)
+VALUES
+('PENDING',
+'En seguimiento',
+1,
+1);
+;
+
+INSERT INTO `saludcantabriaresponde`.`patient_file_status`
+(`pfs_code`,
+`pfs_description`,
+`pfs_enabled`,
+`pfs_sort`)
+VALUES
+('CLOSED',
+'Cerrado',
+1,
+2);
+;
+  

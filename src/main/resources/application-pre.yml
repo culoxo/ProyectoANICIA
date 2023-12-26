@@ -1,0 +1,85 @@
+server:
+  port: 9898
+
+api: /api/v1
+
+saludcantabriaresponde:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/saludcantabriaresponde?serverTimezone=Europe/Madrid
+    username: 'SCResponde'
+    password: '22..SCResp20'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+civitas:
+  datasource:
+    jdbc-url: jdbc:oracle:thin:@//humvx8s2vm3.intranet.humv.es:1521/precivi.intranet.humv.es
+    username: 'TS_CVDCAN'
+    password: 'SCVA4492'
+    driver-class-name: oracle.jdbc.OracleDriver
+    maximumPoolSize: 5
+
+spring:
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+ws_rest:
+  scsconsultas: https://scswebpre.intranet.scsalud.es/RestConsultas/services/Consultas/consultas
+  scspruebas: https://scswebpre.intranet.scsalud.es/RestConsultas/services/Consultas/pruebas
+  scsconsultasauthbase: serviciocantabrodesalud
+  scsprimaria: https://apcintcer.intranet.scsalud.es/scs-integraciones/api/v1
+  scsprimariaacceso: /citacion/acceso
+  scsprimariacitas: /agenda/citasRegistradas
+  scsprimariaapp: SCRESPONDE
+  dgc: https://ccdserviciospre.intranet.scsalud.es/api/v1/external
+  vacucan: https://vacucanserviciospre.intranet.scsalud.es/api/v1/external # TODO revisar
+  scsdgctestliscan: /tests
+  
+ws_soap:
+  historiaclinica: 
+    url: https://apcintcer.intranet.scsalud.es/scs-integraciones/services/hcdsns/?wsdl
+  mentes:
+    #url: https://smsmentes.intranet.scsalud.es/Mentes-IS-MT/services/MI-InterfazSimplificado?wsdl
+    #username: cvdcan
+    #password: 1sM3nGcs21
+    # url: https://comunicasms.intranet.scsalud.es/service.asmx?wsdl
+    # username: PINOCHO
+    # password: PFadJn30mKsbM3iP   
+
+    url: https://comunicasms.intranet.scsalud.es/service.asmx?wsdl
+    username: SCResponde
+    password: Zv4mSRWKFNDO8WOZ    
+    remitente: 'SCSalud'
+    pwa_url: 'https://miencuestapre.scsalud.es/'
+    pin_and_url_sms_text_1: 'Para cumplimentar al cuestionario, debe acceder a la siguiente URL: '
+    pin_and_url_sms_text_2: ' e introducir este PIN:'
+    sms_limit_batch: 100
+  
+truststore:
+  alias: (lp_qsep_m_es_p12_344_1825_sw_kpsc)_q3900738j
+  password: VwfPr8FvKdfwuncW
+  file: /opt/saludcantabriaresponde/sns_keystore_2022.jks
+  type: jks
+
+ws:
+  send_request:
+    url: https://apcintcer.intranet.scsalud.es/scs-integraciones/services/informes/nuevo-informe-externo/nuevoInformeExterno
+  wearables:
+    api:
+      username: info@vitesia.com
+      password: vitesia130
+      base-url: http://172.24.8.26/cantabria150api/
+      token-uri: oauth/token
+      check-token-uri: oauth/check_token
+      basic-auth-username: api
+      basic-auth-password: api
+      weight-uri: peso/listarPorUsuario
+      imc-uri: imc/listarPorUsuario
+      waist-uri: cintura/listarPorUsuario
+      hip-uri: cadera/listarPorUsuario
+      blood-pressure-uri: tension/listarPorUsuario
+      activity-uri: actividades/listarPorUsuarioFecha
+      user-uri: informacionUsuario/listar
+

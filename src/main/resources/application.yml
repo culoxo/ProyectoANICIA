@@ -1,0 +1,67 @@
+server:
+  port: 9898
+
+api: /api/v1
+
+spring:
+  jpa:
+    open-in-view: true
+    #databasePlatform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  profiles:
+    active: dev 
+    
+allowed-origins: >
+  http://localhost:3000,
+  http://localhost:3001,
+ 
+consumers:
+  consumerslist:
+    -
+      app: frontend
+      key: 12b46aeb-ac3f-429c-8e87-bafbc5c725bb
+
+jwt:
+  secret: Johnny20Deep23Lang
+  expiration: 86400000    
+
+login:
+  attempts: 5
+  lockmessage: La cuenta ha sido bloqueada. Ha superado el máximo intento de accesos fallidos. 
+
+ws_rest:
+  timeout: 30000
+  scsconsultas: http://localhost:9898/api/v1/RestConsultas/services/Consultas/consultas
+ 
+
+ws_soap:
+  autentica: 
+    url:  https://sautentica.intranet.scsalud.es/index.php#Conectar
+    application: cvdcan
+
+        
+truststore:
+  alias: (lp_qsep_m_es_p12_344_1825_sw_kpsc)_q3900738j
+  password: VwfPr8FvKdfwuncW
+  file: /opt/saludcantabriaresponde/sns_keystore_2022.jks
+  type: jks
+
+secretkeys:
+  secretkeylist:
+    -
+      app: appscsalud
+      secret: hwWg0iPyknE5JqKnl4SvJC8YTaXNfvsCVmCkYa15JwLGB9x2WF5Oa0V421dpdeAE
+      roles: >
+        ROLE_GET_CERTIFICATES
+
+dgc:
+  app: appscsalud
+  apiKey: appscsalud
+
+
+
+

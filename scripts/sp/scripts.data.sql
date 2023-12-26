@@ -1,0 +1,47 @@
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'sport-prescription-history',9,0,3,5,null,null,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'patient-basic-data',0,0,3,6,3,6,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'comparison-line-chart',0,12,4,4,null,null,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'perimeters-three-bar-chart',4,11,5,4,null,null,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'calendar',3,2,6,8,6,8,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'week-activity',9,6,3,5,3,5,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'weight-small-line-chart',3,0,2,3,2,3,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-pressure-small-line-chart',5,0,2,3,2,3,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'imc-small-line-chart',7,0,2,3,2,3,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'notes',9,7,3,5,null,null,'ROLE_SP_EF');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-presure-candlestick-chart',0,6,3,5,null,null,'ROLE_SP_EF');
+
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'sport-prescription-history',9,0,3,5,null,null,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'patient-basic-data',0,0,3,6,3,6,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'comparison-line-chart',0,12,4,4,null,null,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'perimeters-three-bar-chart',4,11,5,4,null,null,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'calendar',3,2,6,8,6,8,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'week-activity',9,6,3,5,3,5,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'weight-small-line-chart',3,0,2,3,2,3,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-pressure-small-line-chart',5,0,2,3,2,3,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'imc-small-line-chart',7,0,2,3,2,3,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'notes',9,7,3,5,null,null,'ROLE_SP_COORD');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-presure-candlestick-chart',0,6,3,5,null,null,'ROLE_SP_COORD');
+
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'sport-prescription-history',9,0,3,5,null,null,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'patient-basic-data',0,0,3,6,3,6,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'comparison-line-chart',0,12,4,4,null,null,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'perimeters-three-bar-chart',4,11,5,4,null,null,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'calendar',3,2,6,8,6,8,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'week-activity',9,6,3,5,3,5,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'weight-small-line-chart',3,0,2,3,2,3,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-pressure-small-line-chart',5,0,2,3,2,3,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'imc-small-line-chart',7,0,2,3,2,3,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'notes',9,7,3,5,null,null,'ROLE_SP_ADMIN');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-presure-candlestick-chart',0,6,3,5,null,null,'ROLE_SP_ADMIN');
+
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'sport-prescription-history',9,0,3,5,null,null,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'patient-basic-data',0,0,3,6,3,6,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'comparison-line-chart',0,12,4,4,null,null,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'perimeters-three-bar-chart',4,11,5,4,null,null,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'calendar',3,2,6,8,6,8,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'week-activity',9,6,3,5,3,5,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'weight-small-line-chart',3,0,2,3,2,3,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-pressure-small-line-chart',5,0,2,3,2,3,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'imc-small-line-chart',7,0,2,3,2,3,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'notes',9,7,3,5,null,null,'ROLE_SP_CLINICAL');
+INSERT INTO widget_module (wm_module, wm_widget, wm_x, wm_y, wm_w, wm_h, wm_minW, wm_minH, wm_role) VALUES ('SP', 'blood-presure-candlestick-chart',0,6,3,5,null,null,'ROLE_SP_CLINICAL');

@@ -1,0 +1,1 @@
+UPDATE answer_type atype SET atype.at_enabled = 0 WHERE atype.at_id = 'RADIO_CUSTOM'
