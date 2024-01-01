@@ -13,7 +13,7 @@ public class UserDTO {
 	
     private Long id;
 	
-	
+	@NotBlank
     private String username;
 
 	@NotBlank

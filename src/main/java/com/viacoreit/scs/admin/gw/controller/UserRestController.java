@@ -41,8 +41,8 @@ public class UserRestController {
 	public ResponseEntity<List<UserDTO>> getUsers(
 		@RequestParam(required = false, name = "active") Boolean active,
 		@RequestParam(required = false, name = "PASSWORD") String password,
-		@RequestParam(required = false, name = "NAME") String name) {
-		return new ResponseEntity<>(this.useService.getUsers(active, password, name).stream()
+		@RequestParam(required = false, name = "USERNAME") String username) {
+		return new ResponseEntity<>(this.useService.getUsers(active, password, username).stream()
 				.map(user -> modelMapper.map(user, UserDTO.class))
 				.collect(Collectors.toList()), HttpStatus.OK);
 	}

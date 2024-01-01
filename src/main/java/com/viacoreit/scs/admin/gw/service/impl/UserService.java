@@ -19,8 +19,8 @@ public class UserService {
 		this.modelMapper = modelMapper;
 	}
 
-	public List<User> getUsers(Boolean active, String password, String name ) {
-	    List<User> user = userRepository.findByCriteria(active, password, name);
+	public List<User> getUsers(Boolean active, String password, String username ) {
+	    List<User> user = userRepository.findByCriteria(active, password, username);
 
 	    return user;
 	}

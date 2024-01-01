@@ -13,7 +13,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	 * @param active
 	 * @return List<User>
 	 */
-	@Query("SELECT u FROM User u WHERE (:active IS NULL OR u.active = :active) AND (:password IS NULL OR u.password = :password) AND (:name IS NULL OR u.name = :name) AND deleted = 0")
-	public List<User> findByCriteria(Boolean active, String password, String name);
+	@Query("SELECT u FROM User u WHERE (:active IS NULL OR u.active = :active) AND (:password IS NULL OR u.password = :password) AND (:username IS NULL OR u.username = :username) AND deleted = 0")
+	public List<User> findByCriteria(Boolean active, String password, String username);
 
 }
