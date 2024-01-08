@@ -26,7 +26,7 @@ public class UserDTO {
 	@NotBlank
 	private String password;
 	
-	private Boolean admin = false;
+	private Boolean admin;
 	private Boolean deleted = false;
 	private Boolean active;
 	private String preguntaSeg;
