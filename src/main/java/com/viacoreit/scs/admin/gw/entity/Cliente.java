@@ -31,7 +31,7 @@ public class Cliente implements Serializable {
 	@Id
 	@SequenceGenerator(name = "CLIENTE_SEQ", schema = "GATEWAYSERVICIOS" , allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CLIENTE_SEQ")
-	@Column(name = "ID", unique = true, nullable = false)
+	@Column(name = "ID_CLIENTE", unique = true, nullable = false)
 	private Long clienteId;
 
 	@Column(name = "NOMBRE")

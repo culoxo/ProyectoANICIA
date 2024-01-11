@@ -56,11 +56,15 @@ public class ClienteRestController {
 	}
 
 	@PutMapping(value = "/{clienteId}")
-	public ResponseEntity<ClienteDTO> updateCliente(@PathVariable Long clienteId, @RequestBody ClienteDTO clienteDto) {
+	public ResponseEntity<ClienteDTO> updateCliente(
+			@PathVariable Long clienteId,
+			@RequestBody ClienteDTO clienteDto) {
+		// Puedes obtener el servicioId desde el clienteDto si es necesario
+	
 		return new ResponseEntity<>(modelMapper
-				.map(clienteService.updateCliente(clienteRepository.findById(clienteId)
-						.orElseThrow(() -> new ResourceNotFoundException("Cliente no encontrado")), clienteDto), ClienteDTO.class), HttpStatus.OK);
+				.map(clienteService.updateCliente(clienteId, clienteDto), ClienteDTO.class), HttpStatus.OK);
 	}
+	
 
 	@DeleteMapping(path = "/{clienteId}")
 	public ResponseEntity<ClienteDTO> deleteCliente(@PathVariable Long clienteId) {
@@ -68,5 +72,13 @@ public class ClienteRestController {
 				.map(clienteService.deleteCliente(clienteRepository.findById(clienteId)
 						.orElseThrow(() -> new ResourceNotFoundException("Cliente no encontrado"))), ClienteDTO.class), HttpStatus.OK);
 	}
+	@PostMapping("/{clienteId}/agregar-servicio/{servicioId}")
+    public ResponseEntity<ClienteDTO> agregarServicioACliente(
+            @PathVariable Long clienteId,
+            @PathVariable Long servicioId) {
+
+        Cliente cliente = clienteService.agregarServicioACliente(clienteId, servicioId);
+        return new ResponseEntity<>(modelMapper.map(cliente, ClienteDTO.class), HttpStatus.OK);
+    }
 	
 }

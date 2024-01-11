@@ -64,6 +64,8 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.PUT, "/api/v1/factura/**").permitAll()
                 .antMatchers(HttpMethod.DELETE, "/api/v1/factura/*").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/v1/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/v1/clientes/**/agregar-servicio/**").permitAll()
+
 
                 
 
