@@ -4,8 +4,6 @@ import java.util.List;
 import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.viacoreit.scs.admin.gw.dto.ClienteDTO;
 import com.viacoreit.scs.admin.gw.entity.Cliente;
 import com.viacoreit.scs.admin.gw.entity.Servicio;
@@ -28,15 +26,12 @@ public class ClienteService {
 	
 	public List<Cliente> getClientes(Boolean active) {
 	    List<Cliente> clientes = clienteRepository.findByCriteria(active);
-
 	    return clientes;
 	}
 	
 	public Cliente addCliente(Cliente cliente) {
 		return this.clienteRepository.save(cliente);
-		
 	}
-	
 	
 	public Cliente updateCliente(Long clienteId, ClienteDTO clienteDto) {
 		Cliente clienteExistente = clienteRepository.findById(clienteId)
@@ -64,28 +59,9 @@ public class ClienteService {
 		// Guardar el cliente actualizado en la base de datos
 		return clienteRepository.save(clienteExistente);
 	}
-	
-	
 
 	public Cliente deleteCliente(Cliente cliente) {
 		cliente.setDeleted(true);
-		
 		return clienteRepository.save(cliente);
-		
 	}
-
-	@Transactional
-    public Cliente agregarServicioACliente(Long clienteId, Long servicioId) {
-        Cliente cliente = clienteRepository.findById(clienteId)
-                .orElseThrow(() -> new ResourceNotFoundException("Cliente no encontrado con ID: " + clienteId));
-
-        Servicio servicio = servicioRepository.findById(servicioId)
-                .orElseThrow(() -> new ResourceNotFoundException("Servicio no encontrado con ID: " + servicioId));
-
-        // Agrega el servicio al cliente
-        cliente.getServicios().add(servicio);
-
-        // Guarda el cliente actualizado en la base de datos
-        return clienteRepository.save(cliente);
-    }
 }

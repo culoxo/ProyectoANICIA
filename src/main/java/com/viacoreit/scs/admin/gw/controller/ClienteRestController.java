@@ -59,8 +59,7 @@ public class ClienteRestController {
 	public ResponseEntity<ClienteDTO> updateCliente(
 			@PathVariable Long clienteId,
 			@RequestBody ClienteDTO clienteDto) {
-		// Puedes obtener el servicioId desde el clienteDto si es necesario
-	
+
 		return new ResponseEntity<>(modelMapper
 				.map(clienteService.updateCliente(clienteId, clienteDto), ClienteDTO.class), HttpStatus.OK);
 	}
@@ -71,14 +70,5 @@ public class ClienteRestController {
 		return new ResponseEntity<>(modelMapper
 				.map(clienteService.deleteCliente(clienteRepository.findById(clienteId)
 						.orElseThrow(() -> new ResourceNotFoundException("Cliente no encontrado"))), ClienteDTO.class), HttpStatus.OK);
-	}
-	@PostMapping("/{clienteId}/agregar-servicio/{servicioId}")
-    public ResponseEntity<ClienteDTO> agregarServicioACliente(
-            @PathVariable Long clienteId,
-            @PathVariable Long servicioId) {
-
-        Cliente cliente = clienteService.agregarServicioACliente(clienteId, servicioId);
-        return new ResponseEntity<>(modelMapper.map(cliente, ClienteDTO.class), HttpStatus.OK);
-    }
-	
+	}	
 }
