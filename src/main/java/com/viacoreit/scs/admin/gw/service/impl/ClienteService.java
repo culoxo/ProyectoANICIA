@@ -43,22 +43,29 @@ public class ClienteService {
 	
 		// Si se proporciona la lista de servicios, actualizarla
 		if (clienteDto.getServicios() != null) {
-			// Limpiar la lista actual de servicios asociados al cliente
+			// Limpiar la lista actual de servicios del cliente
 			clienteExistente.getServicios().clear();
 	
 			// Obtener los servicios proporcionados en el DTO y agregarlos al cliente
-			for (Servicio servicio : clienteDto.getServicios()) {
-				Servicio servicioExistente = servicioRepository.findById(servicio.getServicioId())
-						.orElseThrow(() -> new ResourceNotFoundException("Servicio no encontrado con ID: " + servicio.getServicioId()));
+			for (Servicio servicioDto : clienteDto.getServicios()) {
+				if (servicioDto.getServicioId() != null) {
+					Servicio servicioExistente = servicioRepository.findById(servicioDto.getServicioId())
+							.orElseThrow(() -> new ResourceNotFoundException("Servicio no encontrado con ID: " + servicioDto.getServicioId()));
 	
-				// Agregar el servicio al cliente
-				clienteExistente.getServicios().add(servicioExistente);
+					// Agregar el servicio existente al cliente
+					clienteExistente.getServicios().add(servicioExistente);
+				} else {
+					// Manejar el caso cuando el ID del servicio es nulo (puedes lanzar una excepción o simplemente ignorarlo)
+					throw new IllegalArgumentException("El ID del servicio no puede ser nulo para asociar servicios existentes.");
+				}
 			}
 		}
 	
 		// Guardar el cliente actualizado en la base de datos
 		return clienteRepository.save(clienteExistente);
 	}
+	
+	
 
 	public Cliente deleteCliente(Cliente cliente) {
 		cliente.setDeleted(true);
