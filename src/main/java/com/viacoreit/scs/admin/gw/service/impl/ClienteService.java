@@ -34,6 +34,10 @@ public class ClienteService {
 	}
 	
 	public Cliente updateCliente(Long clienteId, ClienteDTO clienteDto) {
+		// Imprimir información sobre los datos recibidos
+		System.out.println("Cliente ID recibido: " + clienteId);
+		System.out.println("Cliente DTO recibido: " + clienteDto.toString());
+	
 		Cliente clienteExistente = clienteRepository.findById(clienteId)
 				.orElseThrow(() -> new ResourceNotFoundException("Cliente no encontrado con ID: " + clienteId));
 	
@@ -52,6 +56,10 @@ public class ClienteService {
 					Servicio servicioExistente = servicioRepository.findById(servicioDto.getServicioId())
 							.orElseThrow(() -> new ResourceNotFoundException("Servicio no encontrado con ID: " + servicioDto.getServicioId()));
 	
+					// Imprimir información sobre los servicios recibidos
+					System.out.println("Servicio ID recibido: " + servicioDto.getServicioId());
+					System.out.println("Servicio DTO recibido: " + servicioDto.toString());
+	
 					// Agregar el servicio existente al cliente
 					clienteExistente.getServicios().add(servicioExistente);
 				} else {
@@ -62,8 +70,14 @@ public class ClienteService {
 		}
 	
 		// Guardar el cliente actualizado en la base de datos
-		return clienteRepository.save(clienteExistente);
+		Cliente clienteActualizado = clienteRepository.save(clienteExistente);
+	
+		// Imprimir información sobre el cliente actualizado
+		System.out.println("Cliente actualizado: " + clienteActualizado.toString());
+	
+		return clienteActualizado;
 	}
+	
 	
 	
 

@@ -17,5 +17,13 @@ public class ServicioDTO {
     private Boolean deleted;
     private boolean active;
 
-
+    @Override
+    public String toString() {
+        return "ServicioDTO{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", deleted=" + deleted +
+                ", active=" + active +
+                '}';
+    }
 }
